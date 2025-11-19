@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:fillViewport="true"
+    android:background="#bebebe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="15dp"
+
+            >
+
+            <TextView
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/orange_round"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                />
+
+            <TextView
+                android:id="@+id/profile_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_marginStart="170dp"
+                android:background="@drawable/orange_round"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/orange_round"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="16dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/text_confirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your reservation"
+                android:textSize="50sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+
+
+            <EditText
+                android:id="@+id/edit_text_people"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="3"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginTop="70dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textColorHint="#444444"/>
+
+            <EditText
+                android:id="@+id/edit_text_date"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="25th"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textColorHint="#444444"/>
+
+            <EditText
+                android:id="@+id/edit_text_time"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="19:00"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textColorHint="#444444"/>
+
+            <EditText
+                android:id="@+id/edit_text_location"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Main area"
+                android:inputType="text"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000"
+                android:textColorHint="#444444"/>
+        </LinearLayout>
+
+        <TextView
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/text_fill_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are the details above correct?"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:background="@drawable/orange_round"/>
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:backgroundTint="#FF9800"
+            android:textColor="#000000"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+</ScrollView>
