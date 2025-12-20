@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ResturantManagmentApp">
         <activity
-            android:name=".MainActivity6"
+            android:name=".BookingConfirmationActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".MenuItemDetailsActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".ReservationsActivity"
             android:exported="true" />
         <activity
-            android:name=".MenuActivity3"
+            android:name=".MenuActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
