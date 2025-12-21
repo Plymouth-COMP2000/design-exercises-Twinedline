@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:fillViewport="true"
+    android:background="#bebebe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="15dp"
+
+            >
+
+            <TextView
+                android:id="@+id/menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/orange_round"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                />
+
+            <TextView
+                android:id="@+id/profile_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:layout_marginStart="170dp"
+                android:background="@drawable/orange_round"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/orange_round"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="20dp"
+            android:padding="16dp">
+
+
+            <TextView
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/text_book_a_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit the menu"
+                android:textSize="50sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/buttonAddItem"
+                style="@style/ActionButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="75dp"
+                android:text="Add Item" />
+
+
+
+            <Button
+                android:id="@+id/buttonEditItem"
+                style="@style/ActionButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="Edit Item" />
+
+
+
+            <Button
+                android:id="@+id/buttonDeleteItem"
+                style="@style/ActionButton"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="Delete Item" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
