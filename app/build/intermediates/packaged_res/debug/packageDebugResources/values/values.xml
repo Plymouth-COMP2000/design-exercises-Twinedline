@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">ResturantManagmentApp</string>
+    <string name="stromboli_pizza">Stromboli Pizza</string>
+    <style name="ActionButton">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">#000000</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="Base.Theme.ResturantManagmentApp" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.ResturantManagmentApp" parent="Base.Theme.ResturantManagmentApp"/>
+</resources>
