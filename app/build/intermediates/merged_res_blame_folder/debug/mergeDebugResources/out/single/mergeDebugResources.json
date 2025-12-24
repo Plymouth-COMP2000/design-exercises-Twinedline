@@ -1,0 +1,190 @@
+[
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_delete_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_delete_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_add_item.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_add_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_guest_edit_reservation_popup.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\guest_edit_reservation_popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_edit_item_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_edit_item_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_spinner_outline.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\spinner_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_log_in.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\log_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_reservations.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\reservations.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_reservation_item.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\reservation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_reservations_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_reservations_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_add_menu_item.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\add_menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_menu_item.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\menu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_guest_view_reservations.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\guest_view_reservations.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_tables.jpg.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\tables.jpg"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_guest_book_reservation.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\guest_book_reservation.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_view_reservations.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_view_reservations.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_burger.png.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\burger.png"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_edit_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_edit_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_edit_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\edit_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_edit_item_popup.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_edit_item_popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_menuitemdetails.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\menuitemdetails.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_guest_reservation_popup.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\guest_reservation_popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_guest_profile_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\guest_profile_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_pizza.png.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\pizza.png"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_sign_up.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\sign_up.xml"
+    },
+    {
+        "merged": "com.example.resturantmanagmentapp-debug-35:/layout_guest_reservation_popup.xml.flat",
+        "source": "com.example.resturantmanagmentapp-main-37:/layout/guest_reservation_popup.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_booking_confirmation.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\booking_confirmation.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_logo.jpg.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\layout_admin_delete_item_menu.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\layout\\admin_delete_item_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-debug-35:\\drawable_orange_round.xml.flat",
+        "source": "C:\\Users\\twine\\.gradle\\daemon\\8.13\\com.example.resturantmanagmentapp-main-37:\\drawable\\orange_round.xml"
+    }
+]
