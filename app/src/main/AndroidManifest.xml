@@ -59,7 +59,7 @@
             android:name=".ReservationsActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminReservationsMenuActivity"
+            android:name=".ProfileActivity"
             android:exported="false" />
 
     </application>

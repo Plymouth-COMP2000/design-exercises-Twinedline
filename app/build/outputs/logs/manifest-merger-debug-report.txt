@@ -191,12 +191,12 @@ ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:59:13-49
-activity#com.example.resturantmanagmentapp.AdminReservationsMenuActivity
+activity#com.example.resturantmanagmentapp.ProfileActivity
 ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:61:9-63:40
 	android:exported
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:63:13-37
 	android:name
-		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:62:13-58
+		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:62:13-44
 uses-sdk
 INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml

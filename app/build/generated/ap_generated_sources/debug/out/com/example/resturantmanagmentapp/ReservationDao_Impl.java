@@ -33,37 +33,38 @@ public final class ReservationDao_Impl implements ReservationDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR ABORT INTO `reservations` (`id`,`customerName`,`date`,`time`,`numberOfPeople`,`location`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `reservations` (`localId`,`id`,`customerName`,`numberOfPeople`,`date`,`time`,`location`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
           final Reservation entity) {
-        statement.bindLong(1, entity.id);
+        statement.bindLong(1, entity.localId);
+        statement.bindLong(2, entity.id);
         if (entity.customerName == null) {
-          statement.bindNull(2);
-        } else {
-          statement.bindString(2, entity.customerName);
-        }
-        if (entity.date == null) {
           statement.bindNull(3);
         } else {
-          statement.bindString(3, entity.date);
-        }
-        if (entity.time == null) {
-          statement.bindNull(4);
-        } else {
-          statement.bindString(4, entity.time);
+          statement.bindString(3, entity.customerName);
         }
         if (entity.numberOfPeople == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.numberOfPeople);
+        }
+        if (entity.date == null) {
           statement.bindNull(5);
         } else {
-          statement.bindString(5, entity.numberOfPeople);
+          statement.bindString(5, entity.date);
         }
-        if (entity.location == null) {
+        if (entity.time == null) {
           statement.bindNull(6);
         } else {
-          statement.bindString(6, entity.location);
+          statement.bindString(6, entity.time);
+        }
+        if (entity.location == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.location);
         }
       }
     };
@@ -71,13 +72,13 @@ public final class ReservationDao_Impl implements ReservationDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "DELETE FROM `reservations` WHERE `id` = ?";
+        return "DELETE FROM `reservations` WHERE `localId` = ?";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
           final Reservation entity) {
-        statement.bindLong(1, entity.id);
+        statement.bindLong(1, entity.localId);
       }
     };
   }
@@ -113,21 +114,28 @@ public final class ReservationDao_Impl implements ReservationDao {
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
+      final int _cursorIndexOfLocalId = CursorUtil.getColumnIndexOrThrow(_cursor, "localId");
       final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
       final int _cursorIndexOfCustomerName = CursorUtil.getColumnIndexOrThrow(_cursor, "customerName");
+      final int _cursorIndexOfNumberOfPeople = CursorUtil.getColumnIndexOrThrow(_cursor, "numberOfPeople");
       final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
       final int _cursorIndexOfTime = CursorUtil.getColumnIndexOrThrow(_cursor, "time");
-      final int _cursorIndexOfNumberOfPeople = CursorUtil.getColumnIndexOrThrow(_cursor, "numberOfPeople");
       final int _cursorIndexOfLocation = CursorUtil.getColumnIndexOrThrow(_cursor, "location");
       final List<Reservation> _result = new ArrayList<Reservation>(_cursor.getCount());
       while (_cursor.moveToNext()) {
         final Reservation _item;
         _item = new Reservation();
+        _item.localId = _cursor.getInt(_cursorIndexOfLocalId);
         _item.id = _cursor.getInt(_cursorIndexOfId);
         if (_cursor.isNull(_cursorIndexOfCustomerName)) {
           _item.customerName = null;
         } else {
           _item.customerName = _cursor.getString(_cursorIndexOfCustomerName);
+        }
+        if (_cursor.isNull(_cursorIndexOfNumberOfPeople)) {
+          _item.numberOfPeople = null;
+        } else {
+          _item.numberOfPeople = _cursor.getString(_cursorIndexOfNumberOfPeople);
         }
         if (_cursor.isNull(_cursorIndexOfDate)) {
           _item.date = null;
@@ -138,11 +146,6 @@ public final class ReservationDao_Impl implements ReservationDao {
           _item.time = null;
         } else {
           _item.time = _cursor.getString(_cursorIndexOfTime);
-        }
-        if (_cursor.isNull(_cursorIndexOfNumberOfPeople)) {
-          _item.numberOfPeople = null;
-        } else {
-          _item.numberOfPeople = _cursor.getString(_cursorIndexOfNumberOfPeople);
         }
         if (_cursor.isNull(_cursorIndexOfLocation)) {
           _item.location = null;

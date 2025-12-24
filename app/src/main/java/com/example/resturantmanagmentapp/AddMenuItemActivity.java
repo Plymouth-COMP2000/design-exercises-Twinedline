@@ -20,6 +20,7 @@ public class AddMenuItemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.admin_add_item);
 
 
@@ -32,17 +33,17 @@ public class AddMenuItemActivity extends AppCompatActivity {
         menuButton = findViewById(R.id.menu_button);
 
 
+        logoututils.setupLogout(this);
+
+
         String[] categories = {"Pizza", "Side", "Drink"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, categories);
         spinnerCategory.setAdapter(adapter);
 
-
         buttonSubmit.setOnClickListener(v -> submitMenuItem());
 
-
         menuButton.setOnClickListener(v -> {
-
             Intent intent = new Intent(AddMenuItemActivity.this, AdminActivity.class);
             startActivity(intent);
             finish();
@@ -61,7 +62,6 @@ public class AddMenuItemActivity extends AppCompatActivity {
             return;
         }
 
-
         try {
             double price = Double.parseDouble(priceText);
             MenuItem newItem = new MenuItem(name, description, price, category, imageUrl);
@@ -70,9 +70,7 @@ public class AddMenuItemActivity extends AppCompatActivity {
                 @Override
                 public void onSaved(MenuItem savedItemFromServer) {
                     new Thread(() -> {
-
                         AppDatabase.getInstance(AddMenuItemActivity.this).menuItemDao().insert(savedItemFromServer);
-
                         runOnUiThread(() -> {
                             Toast.makeText(AddMenuItemActivity.this, "Added to Server & Local DB", Toast.LENGTH_SHORT).show();
                             finish();
@@ -82,7 +80,6 @@ public class AddMenuItemActivity extends AppCompatActivity {
             });
 
         } catch (NumberFormatException e) {
-
             Toast.makeText(this, "Please enter a valid number for price", Toast.LENGTH_SHORT).show();
         }
     }

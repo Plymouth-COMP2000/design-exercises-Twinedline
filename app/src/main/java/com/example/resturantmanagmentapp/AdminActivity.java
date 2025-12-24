@@ -17,9 +17,8 @@ public class AdminActivity extends AppCompatActivity {
         Button buttonAdd = findViewById(R.id.buttonAddItem);
         Button buttonEdit = findViewById(R.id.buttonEditItem);
         Button buttonDelete = findViewById(R.id.buttonDeleteItem);
-        Button btnEdit = findViewById(R.id.buttonEditItem);
-        TextView resButton = findViewById(R.id.reservations_button);
-
+        TextView reservationsBtn = findViewById(R.id.reservations_button);
+        TextView logoutBtn = findViewById(R.id.logout_button);
 
 
         if (buttonAdd != null) {
@@ -38,20 +37,30 @@ public class AdminActivity extends AppCompatActivity {
         }
 
 
-        btnEdit.setOnClickListener(v -> {
-
-            Intent intent = new Intent(AdminActivity.this, EditMenuActivity.class);
-            startActivity(intent);
-        });
-
-
-        resButton.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AdminReservationsMenuActivity.class);
-            startActivity(intent);
-        });
+        if (buttonEdit != null) {
+            buttonEdit.setOnClickListener(v -> {
+                Intent intent = new Intent(AdminActivity.this, EditMenuActivity.class);
+                startActivity(intent);
+            });
+        }
 
 
+        if (reservationsBtn != null) {
+            reservationsBtn.setOnClickListener(v -> {
+                Intent intent = new Intent(this, AdminViewReservationsActivity.class);
+                startActivity(intent);
+            });
+        }
 
 
+        if (logoutBtn != null) {
+            logoutBtn.setOnClickListener(v -> {
+                Intent intent = new Intent(AdminActivity.this, LoginActivity.class);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            });
+        }
     }
 }

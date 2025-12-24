@@ -81,6 +81,8 @@
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"/>
 
+
+
                 <TextView
                     android:textStyle="bold"
                     android:clickable="true"
@@ -104,7 +106,7 @@
                     android:inputType="number"
                     android:padding="12dp"
                     android:background="@android:drawable/edit_text"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="10dp"
                     android:layout_gravity="center_horizontal"
                     android:textColor="#000000"
                     android:textColorHint="#444444"/>
@@ -134,6 +136,31 @@
                     android:layout_gravity="center_horizontal"
                     android:textColor="#000000"
                     android:textColorHint="#444444"/>
+
+            <EditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="Name of bookie"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#888888"
+                android:focusable="false"
+                android:clickable="false"
+                android:cursorVisible="false" />
+            <TextView
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location:"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000000" />
 
             <Spinner
                 android:id="@+id/spinnerCategory"

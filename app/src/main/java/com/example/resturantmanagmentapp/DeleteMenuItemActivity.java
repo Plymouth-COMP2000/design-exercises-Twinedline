@@ -22,6 +22,8 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
         TextView menuBtn = findViewById(R.id.menu_button);
         menuBtn.setOnClickListener(v -> finish());
 
+        logoututils.setupLogout(this);
+
         db = AppDatabase.getInstance(this);
         loadMenuData();
     }
@@ -30,11 +32,9 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
         new Thread(() -> {
             List<MenuItem> allItems = db.menuItemDao().getAll();
 
-
             List<MenuItem> pizzas = new ArrayList<>();
             List<MenuItem> sides = new ArrayList<>();
             List<MenuItem> drinks = new ArrayList<>();
-
 
             for (MenuItem item : allItems) {
                 if (item.getCategory() == null) continue;
@@ -50,7 +50,6 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
             }
 
             runOnUiThread(() -> {
-
                 setupRecyclerView(findViewById(R.id.recyclerPizzas), pizzas);
                 setupRecyclerView(findViewById(R.id.recyclerSides), sides);
                 setupRecyclerView(findViewById(R.id.recyclerDrinks), drinks);
@@ -63,7 +62,6 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         MenuAdapter adapter = new MenuAdapter(items);
-
 
         adapter.setOnItemClickListener(item -> {
             showConfirmDeleteDialog(item);
@@ -85,10 +83,7 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
 
     private void deleteItem(MenuItem item) {
         new Thread(() -> {
-
             db.menuItemDao().delete(item);
-
-
             Api.deleteMenuItem(this, item.getId());
 
             runOnUiThread(() -> {
@@ -113,7 +108,6 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
                     for (MenuItem item : items) {
                         db.menuItemDao().insert(item);
                     }
-
                     runOnUiThread(() -> loadMenuData());
                 }).start();
             }

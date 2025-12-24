@@ -73,7 +73,7 @@
             android:name="com.example.resturantmanagmentapp.ReservationsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.resturantmanagmentapp.AdminReservationsMenuActivity"
+            android:name="com.example.resturantmanagmentapp.ProfileActivity"
             android:exported="false" />
 
         <service

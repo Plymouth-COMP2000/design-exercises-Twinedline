@@ -3148,13 +3148,11 @@ id bounceStart
 id btn_cancel_res
 id btn_submit_reservation
 id buttonAddItem
-id buttonCancelReservation
 id buttonDeleteItem
 id buttonEditItem
 id buttonLogin
 id buttonPanel
 id buttonSubmitItem
-id buttonViewReservations
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3239,8 +3237,13 @@ id editTextName
 id editTextPassword
 id editTextPrice
 id edit_query
+id edit_res_date
+id edit_res_location_spinner
+id edit_res_people
+id edit_res_time
 id edit_text_date
 id edit_text_location
+id edit_text_name
 id edit_text_people
 id edit_text_time
 id elastic
@@ -3280,6 +3283,7 @@ id group_divider
 id grouping
 id groups
 id guest_menu_reservations
+id guest_view_reservations
 id header_title
 id hideable
 id home
@@ -3327,6 +3331,7 @@ id line3
 id linear
 id listMode
 id list_item
+id logout_button
 id m3_side_sheet
 id main
 id marquee
@@ -3721,7 +3726,6 @@ layout admin_delete_item_menu
 layout admin_edit_item_menu
 layout admin_edit_item_popup
 layout admin_menu
-layout admin_reservations_menu
 layout admin_view_reservations
 layout booking_confirmation
 layout custom_dialog
@@ -3741,6 +3745,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout guest_book_reservation
+layout guest_profile_menu
+layout guest_reservation_popup
 layout log_in
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

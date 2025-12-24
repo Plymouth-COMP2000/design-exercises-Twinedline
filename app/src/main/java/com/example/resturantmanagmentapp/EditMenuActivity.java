@@ -6,10 +6,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.app.AlertDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +22,14 @@ public class EditMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.admin_delete_item_menu);
+        setContentView(R.layout.admin_edit_item_menu);
 
         TextView menuBtn = findViewById(R.id.menu_button);
-        menuBtn.setOnClickListener(v -> finish());
+        if (menuBtn != null) {
+            menuBtn.setOnClickListener(v -> finish());
+        }
+
+        logoututils.setupLogout(this);
 
         db = AppDatabase.getInstance(this);
         loadMenuData();
@@ -55,7 +59,6 @@ public class EditMenuActivity extends AppCompatActivity {
         }).start();
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -82,7 +85,6 @@ public class EditMenuActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         MenuAdapter adapter = new MenuAdapter(items);
 
-
         adapter.setOnItemClickListener(this::showEditDialog);
 
         recyclerView.setAdapter(adapter);
@@ -95,7 +97,6 @@ public class EditMenuActivity extends AppCompatActivity {
         EditText descInput = view.findViewById(R.id.editDesc);
         EditText priceInput = view.findViewById(R.id.editPrice);
         EditText urlInput = view.findViewById(R.id.editImageUrl);
-
 
         nameInput.setText(item.getName());
         descInput.setText(item.getDescription());

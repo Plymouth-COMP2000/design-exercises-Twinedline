@@ -37,9 +37,9 @@ public final class AppDatabase_Impl extends AppDatabase {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `menu_items` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT, `price` REAL NOT NULL, `description` TEXT, `category` TEXT, `imageUrl` TEXT)");
-        db.execSQL("CREATE TABLE IF NOT EXISTS `reservations` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `customerName` TEXT, `date` TEXT, `time` TEXT, `numberOfPeople` TEXT, `location` TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `reservations` (`localId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `id` INTEGER NOT NULL, `customerName` TEXT, `numberOfPeople` TEXT, `date` TEXT, `time` TEXT, `location` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '794908960c25131c2bfb497fce067dfc')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7c45652d27772f1f15d60b9490379b9e')");
       }
 
       @Override
@@ -105,12 +105,13 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoMenuItems + "\n"
                   + " Found:\n" + _existingMenuItems);
         }
-        final HashMap<String, TableInfo.Column> _columnsReservations = new HashMap<String, TableInfo.Column>(6);
-        _columnsReservations.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsReservations = new HashMap<String, TableInfo.Column>(7);
+        _columnsReservations.put("localId", new TableInfo.Column("localId", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsReservations.put("id", new TableInfo.Column("id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsReservations.put("customerName", new TableInfo.Column("customerName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsReservations.put("numberOfPeople", new TableInfo.Column("numberOfPeople", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsReservations.put("date", new TableInfo.Column("date", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsReservations.put("time", new TableInfo.Column("time", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsReservations.put("numberOfPeople", new TableInfo.Column("numberOfPeople", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsReservations.put("location", new TableInfo.Column("location", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysReservations = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesReservations = new HashSet<TableInfo.Index>(0);
@@ -123,7 +124,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "794908960c25131c2bfb497fce067dfc", "b23f457f2ff9a89fd3087c94431068d6");
+    }, "7c45652d27772f1f15d60b9490379b9e", "a9b724c51b4a1d53771fcfb1489cd6f4");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

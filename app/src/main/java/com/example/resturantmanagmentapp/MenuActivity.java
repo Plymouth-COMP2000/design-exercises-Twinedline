@@ -28,6 +28,14 @@ public class MenuActivity extends AppCompatActivity {
             });
         }
 
+        TextView profileBtn = findViewById(R.id.profile_button);
+        if (profileBtn != null) {
+            profileBtn.setOnClickListener(v -> {
+                Intent intent = new Intent(MenuActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            });
+        }
+
 
         loadLocalData();
     }

@@ -57,4 +57,10 @@ public class ReservationsAdapter extends RecyclerView.Adapter<ReservationsAdapte
             btnCancel = itemView.findViewById(R.id.btn_cancel_res);
         }
     }
+
+    public void removeAt(int position) {
+        reservations.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position, reservations.size());
+    }
 }
