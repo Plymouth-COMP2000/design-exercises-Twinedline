@@ -61,7 +61,16 @@
             android:name="com.example.resturantmanagmentapp.MenuItemDetailsActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.resturantmanagmentapp.ReservationsActivity"
+            android:name="com.example.resturantmanagmentapp.ReservationsAdapter"
+            android:exported="false" />
+        <activity
+            android:name="com.example.resturantmanagmentapp.EditMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.resturantmanagmentapp.AdminViewReservationsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.resturantmanagmentapp.AdminReservationsMenuActivity"
             android:exported="false" />
 
         <service

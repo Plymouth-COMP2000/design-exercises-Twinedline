@@ -47,7 +47,16 @@
             android:name=".MenuItemDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".ReservationsActivity"
+            android:name=".ReservationsAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".EditMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminViewReservationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminReservationsMenuActivity"
             android:exported="false" />
 
     </application>

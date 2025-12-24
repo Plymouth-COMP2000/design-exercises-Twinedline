@@ -15,12 +15,17 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-
         db = AppDatabase.getInstance(this);
 
 
         loadLocalData();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        syncWithApi();
     }
 
     private void loadLocalData() {
@@ -28,17 +33,21 @@ public class MenuActivity extends AppCompatActivity {
             List<MenuItem> allItems = db.menuItemDao().getAll();
 
 
-            android.util.Log.d("MENU_DEBUG", "Total items in DB: " + allItems.size());
+            android.util.Log.d("MENU_DEBUG", "Total items found in DB: " + allItems.size());
 
             List<MenuItem> pizzas = new ArrayList<>();
             List<MenuItem> sides = new ArrayList<>();
             List<MenuItem> drinks = new ArrayList<>();
 
             for (MenuItem item : allItems) {
-                if (item.getCategory() == null) continue;
+                if (item.getCategory() == null) {
 
-                String category = item.getCategory().toLowerCase();
+                    android.util.Log.e("MENU_DEBUG", "Item " + item.getName() + " has a NULL category");
+                    continue;
+                }
 
+
+                String category = item.getCategory().toLowerCase().trim();
 
                 if (category.contains("pizza")) {
                     pizzas.add(item);
@@ -46,6 +55,8 @@ public class MenuActivity extends AppCompatActivity {
                     sides.add(item);
                 } else if (category.contains("drink")) {
                     drinks.add(item);
+                } else {
+                    android.util.Log.w("MENU_DEBUG", "Unknown category found: " + category);
                 }
             }
 
@@ -58,7 +69,6 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(RecyclerView rv, List<MenuItem> items) {
-
         if (rv != null) {
             rv.setLayoutManager(new GridLayoutManager(this, 3));
             rv.setAdapter(new MenuAdapter(items));
@@ -72,11 +82,10 @@ public class MenuActivity extends AppCompatActivity {
                 new Thread(() -> {
 
                     db.menuItemDao().deleteAll();
-
-
                     for (MenuItem item : items) {
                         db.menuItemDao().insert(item);
                     }
+
 
                     runOnUiThread(() -> {
                         loadLocalData();

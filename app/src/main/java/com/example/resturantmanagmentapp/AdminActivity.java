@@ -17,7 +17,8 @@ public class AdminActivity extends AppCompatActivity {
         Button buttonAdd = findViewById(R.id.buttonAddItem);
         Button buttonEdit = findViewById(R.id.buttonEditItem);
         Button buttonDelete = findViewById(R.id.buttonDeleteItem);
-        TextView menuBtn = findViewById(R.id.menu_button);
+        Button btnEdit = findViewById(R.id.buttonEditItem);
+        TextView resButton = findViewById(R.id.reservations_button);
 
 
         if (buttonAdd != null) {
@@ -36,12 +37,20 @@ public class AdminActivity extends AppCompatActivity {
         }
 
 
-        if (menuBtn != null) {
-            menuBtn.setOnClickListener(v -> {
-                Intent intent = new Intent(AdminActivity.this, MenuActivity.class);
-                startActivity(intent);
-            });
-        }
+        btnEdit.setOnClickListener(v -> {
+
+            Intent intent = new Intent(AdminActivity.this, EditMenuActivity.class);
+            startActivity(intent);
+        });
+
+
+        resButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AdminReservationsMenuActivity.class);
+            startActivity(intent);
+        });
+
+
+
 
     }
 }

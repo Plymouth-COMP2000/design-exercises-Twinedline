@@ -17,7 +17,7 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_delete_menu);
+        setContentView(R.layout.admin_delete_item_menu);
 
         TextView menuBtn = findViewById(R.id.menu_button);
         menuBtn.setOnClickListener(v -> finish());
@@ -96,5 +96,27 @@ public class DeleteMenuItemActivity extends AppCompatActivity {
                 loadMenuData();
             });
         }).start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        syncWithApi();
+    }
+
+    private void syncWithApi() {
+        Api.getAllMenuItems(this, new Api.MenuCallback() {
+            @Override
+            public void onSuccess(List<MenuItem> items) {
+                new Thread(() -> {
+                    db.menuItemDao().deleteAll();
+                    for (MenuItem item : items) {
+                        db.menuItemDao().insert(item);
+                    }
+
+                    runOnUiThread(() -> loadMenuData());
+                }).start();
+            }
+        });
     }
 }

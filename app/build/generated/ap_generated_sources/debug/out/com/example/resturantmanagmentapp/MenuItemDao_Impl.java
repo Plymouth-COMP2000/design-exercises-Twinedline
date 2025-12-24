@@ -28,6 +28,8 @@ public final class MenuItemDao_Impl implements MenuItemDao {
 
   private final EntityDeletionOrUpdateAdapter<MenuItem> __deletionAdapterOfMenuItem;
 
+  private final EntityDeletionOrUpdateAdapter<MenuItem> __updateAdapterOfMenuItem;
+
   private final SharedSQLiteStatement __preparedStmtOfDeleteAll;
 
   public MenuItemDao_Impl(@NonNull final RoomDatabase __db) {
@@ -77,6 +79,40 @@ public final class MenuItemDao_Impl implements MenuItemDao {
         statement.bindLong(1, entity.getId());
       }
     };
+    this.__updateAdapterOfMenuItem = new EntityDeletionOrUpdateAdapter<MenuItem>(__db) {
+      @Override
+      @NonNull
+      protected String createQuery() {
+        return "UPDATE OR ABORT `menu_items` SET `id` = ?,`name` = ?,`price` = ?,`description` = ?,`category` = ?,`imageUrl` = ? WHERE `id` = ?";
+      }
+
+      @Override
+      protected void bind(@NonNull final SupportSQLiteStatement statement, final MenuItem entity) {
+        statement.bindLong(1, entity.getId());
+        if (entity.getName() == null) {
+          statement.bindNull(2);
+        } else {
+          statement.bindString(2, entity.getName());
+        }
+        statement.bindDouble(3, entity.getPrice());
+        if (entity.getDescription() == null) {
+          statement.bindNull(4);
+        } else {
+          statement.bindString(4, entity.getDescription());
+        }
+        if (entity.getCategory() == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.getCategory());
+        }
+        if (entity.getImageUrl() == null) {
+          statement.bindNull(6);
+        } else {
+          statement.bindString(6, entity.getImageUrl());
+        }
+        statement.bindLong(7, entity.getId());
+      }
+    };
     this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
       @Override
       @NonNull
@@ -105,6 +141,18 @@ public final class MenuItemDao_Impl implements MenuItemDao {
     __db.beginTransaction();
     try {
       __deletionAdapterOfMenuItem.handle(item);
+      __db.setTransactionSuccessful();
+    } finally {
+      __db.endTransaction();
+    }
+  }
+
+  @Override
+  public void update(final MenuItem item) {
+    __db.assertNotSuspendingTransaction();
+    __db.beginTransaction();
+    try {
+      __updateAdapterOfMenuItem.handle(item);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();

@@ -30,7 +30,7 @@ public class Api {
 
 
     public interface AddMenuItemCallback {
-        void onSaved();
+        void onSaved(MenuItem savedItem);
     }
 
     public interface MenuCallback {
@@ -75,28 +75,17 @@ public class Api {
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, json,
                     response -> {
-                        Log.d("API", "SUCCESS: " + response.toString());
 
-
+                        MenuItem savedItem = gson.fromJson(response.toString(), MenuItem.class);
                         if (callback != null) {
-                            callback.onSaved();
+                            callback.onSaved(savedItem);
                         }
                     },
-                    error -> {
-                        Log.e("API", "Volley error: " + error.toString());
-                        if (error.networkResponse != null) {
-                            String errorData = new String(error.networkResponse.data);
-                            Toast.makeText(context, "Server Error: " + errorData, Toast.LENGTH_LONG).show();
-                        } else {
-                            Toast.makeText(context, "Connection Failed. Is the server running?", Toast.LENGTH_SHORT).show();
-                        }
-                    }
+                    error -> Log.e("API", "Error: " + error.getMessage())
             );
-
             requestQueue.add(request);
-
         } catch (JSONException e) {
-            Log.e("API", "JSON Error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

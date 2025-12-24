@@ -2,7 +2,6 @@ package com.example.resturantmanagmentapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,9 +20,9 @@ public class AddMenuItemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_menu_item);
+        setContentView(R.layout.admin_add_item);
 
-        // 1. Initialize UI elements
+
         editTextName = findViewById(R.id.editTextName);
         editTextDesc = findViewById(R.id.editTextDesc);
         editTextPrice = findViewById(R.id.editTextPrice);
@@ -57,36 +56,33 @@ public class AddMenuItemActivity extends AppCompatActivity {
         String category = spinnerCategory.getSelectedItem().toString();
         String imageUrl = editTextImageUrl.getText().toString().trim();
 
-
         if (name.isEmpty() || description.isEmpty() || priceText.isEmpty() || imageUrl.isEmpty()) {
             Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show();
             return;
         }
 
+
         try {
             double price = Double.parseDouble(priceText);
             MenuItem newItem = new MenuItem(name, description, price, category, imageUrl);
 
-
             Api.addMenuItem(this, newItem, new Api.AddMenuItemCallback() {
                 @Override
-                public void onSaved() {
-
+                public void onSaved(MenuItem savedItemFromServer) {
                     new Thread(() -> {
-                        AppDatabase.getInstance(AddMenuItemActivity.this).menuItemDao().insert(newItem);
+
+                        AppDatabase.getInstance(AddMenuItemActivity.this).menuItemDao().insert(savedItemFromServer);
 
                         runOnUiThread(() -> {
-
-                            editTextName.setText("");
-                            editTextDesc.setText("");
-                            editTextPrice.setText("");
-                            editTextImageUrl.setText("");
-                            Toast.makeText(AddMenuItemActivity.this, name + " added successfully!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddMenuItemActivity.this, "Added to Server & Local DB", Toast.LENGTH_SHORT).show();
+                            finish();
                         });
                     }).start();
                 }
             });
+
         } catch (NumberFormatException e) {
+
             Toast.makeText(this, "Please enter a valid number for price", Toast.LENGTH_SHORT).show();
         }
     }
