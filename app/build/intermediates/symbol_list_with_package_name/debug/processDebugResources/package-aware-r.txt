@@ -3279,6 +3279,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id guest_menu_reservations
 id header_title
 id hideable
 id home

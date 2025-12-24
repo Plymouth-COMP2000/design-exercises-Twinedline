@@ -35,6 +35,7 @@ id edit_text_location
 id edit_text_people
 id edit_text_time
 id frame_pizza
+id guest_menu_reservations
 id imageLogo
 id image_pizza
 id image_resturant

@@ -56,6 +56,9 @@
             android:name=".AdminViewReservationsActivity"
             android:exported="false" />
         <activity
+            android:name=".ReservationsActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminReservationsMenuActivity"
             android:exported="false" />
 

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.widget.TextView;
 import java.util.List;
 
 public class AdminViewReservationsActivity extends AppCompatActivity {
@@ -17,9 +18,18 @@ public class AdminViewReservationsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_view_reservations);
 
+
+        TextView btnBackToResMenu = findViewById(R.id.reservations_button);
+
+
+        btnBackToResMenu.setOnClickListener(v -> {
+
+            finish();
+        });
+
+
         recyclerView = findViewById(R.id.recycler_view_reservations);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         loadReservations();
     }
 

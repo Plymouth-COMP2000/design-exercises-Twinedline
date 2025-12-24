@@ -1,6 +1,8 @@
 package com.example.resturantmanagmentapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +18,15 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
         db = AppDatabase.getInstance(this);
+
+
+        TextView bookTableBtn = findViewById(R.id.guest_menu_reservations);
+        if (bookTableBtn != null) {
+            bookTableBtn.setOnClickListener(v -> {
+                Intent intent = new Intent(MenuActivity.this, ReservationsActivity.class);
+                startActivity(intent);
+            });
+        }
 
 
         loadLocalData();

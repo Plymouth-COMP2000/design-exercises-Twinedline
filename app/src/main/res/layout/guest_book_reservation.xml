@@ -101,7 +101,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:hint="Number of people attending"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:padding="12dp"
                     android:background="@android:drawable/edit_text"
                     android:layout_marginTop="70dp"
@@ -135,19 +135,15 @@
                     android:textColor="#000000"
                     android:textColorHint="#444444"/>
 
-            <EditText
-                android:id="@+id/edit_text_location"
+            <Spinner
+                android:id="@+id/spinnerCategory"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:hint="Location"
-                android:inputType="text"
-                android:padding="12dp"
-                android:background="@android:drawable/edit_text"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="40dp"
                 android:layout_gravity="center_horizontal"
-                android:textColor="#000000"
-                android:textColorHint="#444444"/>
+                android:layout_marginTop="10dp"
+                android:background="@drawable/spinner_outline"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center" />
         </LinearLayout>
 
         <Button

@@ -21,6 +21,7 @@ public class AdminActivity extends AppCompatActivity {
         TextView resButton = findViewById(R.id.reservations_button);
 
 
+
         if (buttonAdd != null) {
             buttonAdd.setOnClickListener(v -> {
                 Intent intent = new Intent(AdminActivity.this, AddMenuItemActivity.class);

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-67:12
+INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:2:1-67:12
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\twine\.gradle\caches\8.13\transforms\ed657c2504032b7a94cb05d64bda34d5\transformed\material-1.10.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\twine\.gradle\caches\8.13\transforms\870de2a67c9be5b4f7ba5f2fd672777d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\twine\.gradle\caches\8.13\transforms\253ea21f9554755940a8db3922afaeff\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -67,8 +67,8 @@ ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\
 	android:name
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:7:5-62:19
-INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:7:5-62:19
+ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:7:5-65:19
+INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:7:5-65:19
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\twine\.gradle\caches\8.13\transforms\ed657c2504032b7a94cb05d64bda34d5\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] C:\Users\twine\.gradle\caches\8.13\transforms\ed657c2504032b7a94cb05d64bda34d5\transformed\material-1.10.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\twine\.gradle\caches\8.13\transforms\870de2a67c9be5b4f7ba5f2fd672777d\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -185,12 +185,18 @@ ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:57:13-37
 	android:name
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:56:13-58
-activity#com.example.resturantmanagmentapp.AdminReservationsMenuActivity
+activity#com.example.resturantmanagmentapp.ReservationsActivity
 ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:58:9-60:40
 	android:exported
 		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:59:13-58
+		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:59:13-49
+activity#com.example.resturantmanagmentapp.AdminReservationsMenuActivity
+ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:61:9-63:40
+	android:exported
+		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:63:13-37
+	android:name
+		ADDED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml:62:13-58
 uses-sdk
 INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\twine\AndroidStudioProjects\design-exercises-Twinedline\app\src\main\AndroidManifest.xml

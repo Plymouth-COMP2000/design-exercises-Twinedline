@@ -3278,6 +3278,7 @@ int id graph_wrap 0x7f0800dc
 int id group_divider 0x7f0800dd
 int id grouping 0x7f0800de
 int id groups 0x7f0800df
+int id guest_menu_reservations 0x7f08022e
 int id header_title 0x7f0800e0
 int id hideable 0x7f0800e1
 int id home 0x7f0800e2
