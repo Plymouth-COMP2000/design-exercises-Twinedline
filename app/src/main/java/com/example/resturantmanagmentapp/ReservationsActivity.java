@@ -49,8 +49,11 @@ public class ReservationsActivity extends AppCompatActivity {
         editDate.setOnClickListener(v -> {
             Calendar c = Calendar.getInstance();
             new DatePickerDialog(this, (view, year, month, day) -> {
-                editDate.setText(day + "/" + (month + 1) + "/" + year);
+                String formattedDate = String.format("%04d-%02d-%02d", year, month + 1, day);
+                editDate.setText(formattedDate);
             }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH)).show();
+
+
         });
 
         editTime.setFocusable(false);

@@ -106,12 +106,16 @@ public class EditMenuActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Edit " + item.getName())
                 .setView(view)
+                // Inside EditMenuItemActivity.java -> showEditDialog
                 .setPositiveButton("Save", (dialog, which) -> {
                     try {
+                        // Using your correct variable names: nameInput, descInput, etc.
                         item.setName(nameInput.getText().toString());
                         item.setDescription(descInput.getText().toString());
                         item.setPrice(Double.parseDouble(priceInput.getText().toString()));
                         item.setImageUrl(urlInput.getText().toString());
+
+                        // This triggers the sync to BOTH Local and Remote
                         saveUpdate(item);
                     } catch (NumberFormatException e) {
                         Toast.makeText(this, "Invalid price", Toast.LENGTH_SHORT).show();
@@ -122,12 +126,36 @@ public class EditMenuActivity extends AppCompatActivity {
     }
 
     private void saveUpdate(MenuItem item) {
-        new Thread(() -> {
-            db.menuItemDao().update(item);
-            runOnUiThread(() -> {
-                Toast.makeText(this, "Updated!", Toast.LENGTH_SHORT).show();
-                loadMenuData();
-            });
-        }).start();
+
+        Toast.makeText(this, "Saving to server...", Toast.LENGTH_SHORT).show();
+
+        Api.updateMenuItem(this, item, new Api.UpdateCallback() {
+            @Override
+            public void onUpdated() {
+
+                // ONLY update Room after server success
+                new Thread(() -> {
+                    db.menuItemDao().update(item);
+                    runOnUiThread(() -> {
+                        Toast.makeText(EditMenuActivity.this,
+                                "Menu item updated successfully",
+                                Toast.LENGTH_SHORT).show();
+                        loadMenuData();
+                    });
+                }).start();
+            }
+
+            @Override
+            public void onError(String error) {
+                runOnUiThread(() ->
+                        Toast.makeText(EditMenuActivity.this,
+                                "Server update failed",
+                                Toast.LENGTH_LONG).show()
+                );
+            }
+        });
     }
+
+
+
 }

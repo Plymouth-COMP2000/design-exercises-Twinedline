@@ -76,7 +76,46 @@ public class Api {
         requestQueue.add(request);
     }
 
-    // --- RESERVATION METHODS ---
+    // Inside Api.java
+    public static void updateMenuItem(Context context, MenuItem item, UpdateCallback callback) {
+        initQueue(context);
+
+        String url = BASE_URL + "/menu/update/" + item.getId();
+        Log.d("MENU_API", "URL: " + url);
+
+        try {
+            JSONObject json = new JSONObject();
+            json.put("name", item.getName());
+            json.put("price", item.getPrice());
+            json.put("description", item.getDescription());
+            json.put("category", item.getCategory());
+            json.put("image_url", item.getImageUrl());
+
+            Log.d("MENU_API", "Body: " + json.toString());
+
+            JsonObjectRequest request = new JsonObjectRequest(
+                    Request.Method.PUT, url, json,
+                    response -> {
+                        Log.d("MENU_API", "SUCCESS: " + response.toString());
+                        if (callback != null) callback.onUpdated();
+                    },
+                    error -> {
+                        String body = "";
+                        if (error.networkResponse != null && error.networkResponse.data != null) {
+                            body = new String(error.networkResponse.data);
+                        }
+                        Log.e("MENU_API", "ERROR: " + body);
+                        if (callback != null) callback.onError(body);
+                    }
+            );
+
+            requestQueue.add(request);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static void addReservation(Context context, Reservation res, AddReservationCallback callback) {
         initQueue(context);

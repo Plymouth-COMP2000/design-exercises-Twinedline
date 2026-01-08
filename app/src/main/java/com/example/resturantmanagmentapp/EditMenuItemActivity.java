@@ -106,4 +106,32 @@ public class EditMenuItemActivity extends AppCompatActivity {
             });
         }).start();
     }
+
+    private void saveUpdate(MenuItem item) {
+        // 1. Show a loading message
+        Toast.makeText(this, "Saving to server...", Toast.LENGTH_SHORT).show();
+
+        // 2. Update the Remote Database first
+        Api.updateMenuItem(this, item, new Api.UpdateCallback() {
+            @Override
+            public void onUpdated() {
+                // 3. ONLY AFTER server success, update local DB
+                new Thread(() -> {
+                    db.menuItemDao().update(item);
+                    runOnUiThread(() -> {
+                        // Change EditMenuActivity.this to EditMenuItemActivity.this
+                        Toast.makeText(EditMenuItemActivity.this, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+                        loadMenuData(); // Refresh UI
+                    });
+                }).start();
+            }
+
+            @Override
+            public void onError(String error) {
+                runOnUiThread(() -> Toast.makeText(EditMenuItemActivity.this, "Server Sync Failed!", Toast.LENGTH_LONG).show());
+            }
+        });
+    }
+
+
 }
